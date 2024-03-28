@@ -1,0 +1,56 @@
+$font-titles: 'Jost', sans-serif;
+$font-main: 'Nunito', sans-serif;
+
+
+// Цвета в интерфейсе
+$violet: #CE75F4;
+$violet-hover: #C85CF5;
+$violet-active: #B944EA;
+$blue: #3BA1FF;
+$blue-hover: #2E98FB;
+$blue-active: #1D8CF2;
+$black: #333333;
+$dark-gray: #787878;
+$middle-gray: #C6C6C6;
+$light-gray: #F0F0F0;
+$white: #ffffff;
+$light-red: #FFD6D3;
+$red: #D21414;
+
+//
+$ozon: #005BFF;
+$wb: #82118C;
+
+
+// Палитры мозаики
+//// общие
+$dmc-5200: #ffffff;
+$dmc-310: #000000;
+
+//// Чёрно-белая
+$dmc-762: #ECECEC;
+$dmc-168: #D1D1D1;
+$dmc-317: #6C6C6C;
+$dmc-3799: #424242;
+
+//// Сепия
+$dmc-543: #F2E3CE;
+$dmc-3864: #CBB69C;
+$dmc-3862: #8A6E4E;
+$dmc-780: #94631A;
+$dmc-898: #492A13;
+$dmc-3031: #4B3C2A;
+$dmc-3371: #1E1108;
+
+//// Поп-арт
+$dmc-727: #FFF1AF;
+$dmc-972: #FFB515;
+$dmc-807: #64ABBA;
+$dmc-3804: #E02876;
+$dmc-333: #5C5478;
+
+
+$gradient-start: #F3D6FF;
+$gradient-end: #D8EEFF;
+$main-gradient: linear-gradient(134deg, $gradient-start 0%, $gradient-end 100%);
+$footer-gradient: linear-gradient(180deg, $gradient-start 0%, $gradient-end 100%);

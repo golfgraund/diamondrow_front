@@ -1,0 +1,77 @@
+@import "@/assets/styles/variables";
+@import "@/assets/styles/mixins";
+
+.slide {
+  width: 52px;
+  min-width: 52px;
+  height: 52px;
+  min-height: 52px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.33s ease;
+  border: 2px solid transparent;
+  //transition: border 0.33s ease;
+
+  @include after($p768){
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    min-height: 60px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-position: 50%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+
+  &.active, &:hover {
+    border-color: $violet;
+  }
+
+  &.slideImage {
+    width: 92px;
+    min-width: 92px;
+    height: 92px;
+    min-height: 92px;
+    box-sizing: border-box;
+
+    @include after($p768){
+      width: 92px;
+      min-width: 92px;
+      height: 92px;
+      min-height: 92px;
+    }
+
+    &::before {
+      //border: 2px solid transparent;
+    }
+
+    &::after {
+      //border: 3px solid transparent;
+    }
+
+    &.active, &:hover {
+      &::before{
+        //border-color: transparent;
+      }
+      &::after {
+        //border-color: $violet;
+      }
+    }
+
+    //&:hover {
+    //  &::before{
+    //    border-color: transparent;
+    //  }
+    //  &::after {
+    //    border-color: $violet;
+    //  }
+    //}
+  }
+}

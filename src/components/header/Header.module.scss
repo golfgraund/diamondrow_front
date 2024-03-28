@@ -1,0 +1,36 @@
+@import '@/assets/styles/mixins';
+
+.header {
+  padding-top: 8px;
+  padding-bottom: 12px;
+
+  @include after($p768) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  @include after($p1025) {
+    padding-bottom: 16px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+
+
+    button {
+      cursor: pointer;
+    }
+  }
+}
+
+.logo {
+  display: block;
+  width: 80px;
+  height: 48px;
+
+  @include after($p768){
+    width: 100px;
+    height: 60px;
+  }
+}

@@ -1,0 +1,85 @@
+@import '@/assets/styles/mixins';
+@import '@/assets/styles/variables';
+
+.section {
+  padding-bottom: 60px;
+}
+
+.header {
+  margin-bottom: 4px;
+
+  @include after($p768){
+    margin-bottom: 0;
+  }
+}
+
+.backButton {
+  margin-bottom: 8px;
+
+  @include after($p768){
+    margin-bottom: 12px;
+  }
+}
+
+.step {
+  margin-bottom: 16px;
+
+  @include after($p768){
+    margin-bottom: 20px;
+  }
+}
+
+.button {
+  width: 100%;
+  margin-top: 24px;
+
+  @include after($p768){
+    margin-top: 28px;
+  }
+}
+
+.hint {
+  position: relative;
+  margin-bottom: 8px;
+
+  span {
+    cursor: pointer;
+    @include text-s;
+    outline: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.33s ease;
+    width: fit-content;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      padding: 4px;
+      border-radius: 50%;
+      border: 1px solid $violet;
+      background: white;
+    }
+
+    &:hover {
+      color: $violet;
+    }
+
+  }
+
+  &__content {
+    position: absolute;
+    opacity: 0;
+    bottom: 0;
+    transform: translateY(calc(100% + 8px));
+    background: #fff;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    transition: opacity 0.33s ease;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}

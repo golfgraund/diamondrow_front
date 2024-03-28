@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=595px, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <link href="assets/styles/styles.css" rel="stylesheet" />
+  <title>Шаблон PDF-файла с инструкцией</title>
+  <style>
+    /* При dpi === 72 физический размер А4 210mm x 297mm соответствует размеру в пикселях 595x842px */
+    @media screen {
+      :root {
+        --dpi: 72;
+      }
+    }
+
+    @media print {
+      :root {
+        --dpi: 95;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="document">
+
+    <div class="cover cover_vertical page">
+      <div class="header">
+        <img class="header__logo" src="assets/images/logo@2x.png" width="88" height="52" alt="Алмазный ряд" />
+        <div class="qr">
+          <div class="qr__hint">Отсканируйте код чтобы открыть инструкцию для сборки на телефоне</div>
+          <img class="qr__code" src="assets/temp/qr-code@2x.png" width="68" height="68" alt="" />
+        </div>
+      </div>
+
+      <picture class="cover__pic">
+        <img src="assets/temp/example-1@2x.png" alt="" />
+      </picture>
+
+      <div class="footer">
+        <div class="legend">
+          <div class="legend__title">Цвета, используемые в мозаике:</div>
+          <img class="legend__image" src="assets/temp/example-3@2x.png" width="188" height="48" alt="" />
+        </div>
+        <div class="contacts">
+          <div class="contacts__title">Возникли вопросы?</div>
+          <p>mail@mail.ru</p>
+          <p>+7 (554) 545-55-55</p>
+          <div class="contacts__messengers">
+            <img src="assets/images/telegram.svg" width="14" height="14" alt="" />
+            <img src="assets/images/viber.svg" width="14" height="14" alt="" />
+            <img src="assets/images/whatsapp.svg" width="14" height="14" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover cover_horizontal page">
+      <div class="header">
+        <img class="header__logo" src="assets/images/logo@2x.png" width="88" height="52" alt="Алмазный ряд" />
+        <div class="qr">
+          <div class="qr__hint">Отсканируйте код чтобы открыть инструкцию для сборки на телефоне</div>
+          <img class="qr__code" src="assets/temp/qr-code@2x.png" width="68" height="68" alt="" />
+        </div>
+      </div>
+
+      <picture class="cover__pic">
+        <img src="assets/temp/example-2@2x.png" width="523" height="391" alt="" />
+      </picture>
+
+      <div class="footer">
+        <div class="legend">
+          <div class="legend__title">Цвета, используемые в мозаике:</div>
+          <img class="legend__image" src="assets/temp/example-3@2x.png" width="188" height="48" alt="" />
+        </div>
+        <div class="contacts">
+          <div class="contacts__title">Возникли вопросы?</div>
+          <p>mail@mail.ru</p>
+          <p>+7 (554) 545-55-55</p>
+          <div class="contacts__messengers">
+            <img src="assets/images/telegram.svg" width="14" height="14" alt="" />
+            <img src="assets/images/viber.svg" width="14" height="14" alt="" />
+            <img src="assets/images/whatsapp.svg" width="14" height="14" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sectors sectors_40x50 page">
+      <div class="header header_compact">
+        <img class="header__logo" src="assets/images/logo@2x.png" width="88" height="52" alt="Алмазный ряд" />
+        <div class="sectorCount">
+          <svg width="26px" height="26px" viewBox="0 0 26 26">
+            <path d="M2.5,12 L12,12 L12,2.5 L2.5,2.5 L2.5,12 Z M2.5,14 L2.5,23.5 L12,23.5 L12,14 L2.5,14 Z M23.5,12 L23.5,2.5 L14,2.5 L14,12 L23.5,12 Z M23.5,14 L14,14 L14,23.5 L23.5,23.5 L23.5,14 Z M1.47368,0 L24.52632,0 C25.340211,0 26,0.65978901 26,1.47368 L26,24.52632 C26,25.340211 25.340211,26 24.52632,26 L1.47368,26 C0.65978901,26 0,25.340211 0,24.52632 L0,1.47368 C0,0.65978901 0.65978901,0 1.47368,0 Z" fill="#333333" fill-rule="nonzero" />
+          </svg>
+          <span>1-9</span>
+        </div>
+      </div>
+
+      <div class="flex-grid flex-grid_40x50">
+        <div class="sector">
+          <div class="sector__number">1</div>
+
+          <div class="sector-grid">
+            <div class="sector-grid__squares sector-grid__squares_40x50">
+              <div class="sector-grid__square empty" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>Я</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+            </div>
+            <div class="sector-grid__head sector-grid__head_top">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+            </div>
+            <div class="sector-grid__head sector-grid__head_bottom">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+            </div>
+            <div class="sector-grid__head sector-grid__head_left">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span>
+            </div>
+            <div class="sector-grid__head sector-grid__head_right">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="sector">
+          <div class="sector__number">2</div>
+          <img class="sector__img" src="assets/temp/example-4@2x.png" width="145" height="155" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">3</div>
+          <img class="sector__img" src="assets/temp/example-4@2x.png" width="145" height="155" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">4</div>
+          <img class="sector__img" src="assets/temp/example-4@2x.png" width="145" height="155" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">5</div>
+          <img class="sector__img" src="assets/temp/example-4@2x.png" width="145" height="155" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">6</div>
+          <img class="sector__img" src="assets/temp/example-4@2x.png" width="145" height="155" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">7</div>
+          <img class="sector__img" src="assets/temp/example-4@2x.png" width="145" height="155" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">8</div>
+          <img class="sector__img" src="assets/temp/example-4@2x.png" width="145" height="155" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">9</div>
+          <img class="sector__img" src="assets/temp/example-4@2x.png" width="145" height="155" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="sectors sectors_30x40 page">
+      <div class="header header_compact">
+        <img class="header__logo" src="assets/images/logo@2x.png" width="88" height="52" alt="Алмазный ряд" />
+        <div class="sectorCount">
+          <svg width="26px" height="26px" viewBox="0 0 26 26">
+            <path d="M2.5,12 L12,12 L12,2.5 L2.5,2.5 L2.5,12 Z M2.5,14 L2.5,23.5 L12,23.5 L12,14 L2.5,14 Z M23.5,12 L23.5,2.5 L14,2.5 L14,12 L23.5,12 Z M23.5,14 L14,14 L14,23.5 L23.5,23.5 L23.5,14 Z M1.47368,0 L24.52632,0 C25.340211,0 26,0.65978901 26,1.47368 L26,24.52632 C26,25.340211 25.340211,26 24.52632,26 L1.47368,26 C0.65978901,26 0,25.340211 0,24.52632 L0,1.47368 C0,0.65978901 0.65978901,0 1.47368,0 Z" fill="#333333" fill-rule="nonzero" />
+          </svg>
+          <span>1-9</span>
+        </div>
+      </div>
+
+      <div class="flex-grid flex-grid_30x40">
+        <div class="sector">
+          <div class="sector__number">1</div>
+
+          <div class="sector-grid">
+            <div class="sector-grid__squares sector-grid__squares_30x40">
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+            </div>
+            <div class="sector-grid__head sector-grid__head_top">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span>
+            </div>
+            <div class="sector-grid__head sector-grid__head_bottom">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span>
+            </div>
+            <div class="sector-grid__head sector-grid__head_left">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+            </div>
+            <div class="sector-grid__head sector-grid__head_right">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="sector">
+          <div class="sector__number">2</div>
+          <img class="sector__img" src="assets/temp/example-5@2x.png" width="158" height="207" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">3</div>
+          <img class="sector__img" src="assets/temp/example-5@2x.png" width="158" height="207" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">4</div>
+          <img class="sector__img" src="assets/temp/example-5@2x.png" width="158" height="207" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">5</div>
+          <img class="sector__img" src="assets/temp/example-5@2x.png" width="158" height="207" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">6</div>
+          <img class="sector__img" src="assets/temp/example-5@2x.png" width="158" height="207" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">7</div>
+          <img class="sector__img" src="assets/temp/example-5@2x.png" width="158" height="207" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">8</div>
+          <img class="sector__img" src="assets/temp/example-5@2x.png" width="158" height="207" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">9</div>
+          <img class="sector__img" src="assets/temp/example-5@2x.png" width="158" height="207" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="sectors sectors_20x30 page">
+      <div class="header header_compact">
+        <img class="header__logo" src="assets/images/logo@2x.png" width="88" height="52" alt="Алмазный ряд" />
+        <div class="sectorCount">
+          <svg width="26px" height="26px" viewBox="0 0 26 26">
+            <path d="M2.5,12 L12,12 L12,2.5 L2.5,2.5 L2.5,12 Z M2.5,14 L2.5,23.5 L12,23.5 L12,14 L2.5,14 Z M23.5,12 L23.5,2.5 L14,2.5 L14,12 L23.5,12 Z M23.5,14 L14,14 L14,23.5 L23.5,23.5 L23.5,14 Z M1.47368,0 L24.52632,0 C25.340211,0 26,0.65978901 26,1.47368 L26,24.52632 C26,25.340211 25.340211,26 24.52632,26 L1.47368,26 C0.65978901,26 0,25.340211 0,24.52632 L0,1.47368 C0,0.65978901 0.65978901,0 1.47368,0 Z" fill="#333333" fill-rule="nonzero" />
+          </svg>
+          <span>1-9</span>
+        </div>
+      </div>
+
+      <div class="flex-grid flex-grid_20x30">
+        <div class="sector">
+          <div class="sector__number">1</div>
+
+          <div class="sector-grid">
+            <div class="sector-grid__squares sector-grid__squares_20x30">
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(138, 110, 78);">
+                <span>C</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>3</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>4</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(255, 255, 255); background: rgb(148, 99, 26);">
+                <span>D</span>
+                <sup>5</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(242, 227, 206);">
+                <span>A</span>
+                <sup>2</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>1</sup>
+              </div>
+              <div class="sector-grid__square" style="color: rgb(51, 51, 51); background: rgb(203, 182, 156);">
+                <span>B</span>
+                <sup>2</sup>
+              </div>
+            </div>
+            <div class="sector-grid__head sector-grid__head_top">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+            </div>
+            <div class="sector-grid__head sector-grid__head_bottom">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+            </div>
+            <div class="sector-grid__head sector-grid__head_left">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+            </div>
+            <div class="sector-grid__head sector-grid__head_right">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+            </div>
+          </div>
+        </div>
+        <div class="sector">
+          <div class="sector__number">2</div>
+          <img class="sector__img" src="assets/temp/example-6@2x.png" width="132" height="195" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">3</div>
+          <img class="sector__img" src="assets/temp/example-6@2x.png" width="132" height="195" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">4</div>
+          <img class="sector__img" src="assets/temp/example-6@2x.png" width="132" height="195" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">5</div>
+          <img class="sector__img" src="assets/temp/example-6@2x.png" width="132" height="195" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">6</div>
+          <img class="sector__img" src="assets/temp/example-6@2x.png" width="132" height="195" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">7</div>
+          <img class="sector__img" src="assets/temp/example-6@2x.png" width="132" height="195" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">8</div>
+          <img class="sector__img" src="assets/temp/example-6@2x.png" width="132" height="195" alt="" />
+        </div>
+        <div class="sector">
+          <div class="sector__number">9</div>
+          <img class="sector__img" src="assets/temp/example-6@2x.png" width="132" height="195" alt="" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+@import '@/assets/styles/mixins.scss';
+@import '@/assets/styles/variables.scss';
+
+.section {
+  padding-bottom: 60px;
+}
+
+.header {
+  margin-bottom: 4px;
+
+  @include after($p768){
+    margin-bottom: 0;
+  }
+}
+
+.backButton {
+  margin-bottom: 8px;
+  @include after($p768){
+    margin-bottom: 12px;
+  }
+}
+
+.picture {
+  display: block;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  max-width: 800px;
+
+  @include after($p768){
+    margin-bottom: 24px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  canvas {
+    border-radius: 8px;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+
+  @include after($p768){
+    margin-bottom: 20px;
+  }
+}
+
+.button {
+  & + .button {
+    margin-left: 28px;
+
+    @include after($p768){
+      margin-left: 36px;
+    }
+  }
+}
+
+.buttonNext {
+  width: 100%;
+}
+
+.text {
+  text-align: center;
+  margin-bottom: 20px;
+
+  @include after($p768){
+    margin-bottom: 24px;
+  }
+}
+
+.wrapper {
+
+  @include before($p1025) {
+    max-width: none;
+  }
+
+  @media screen and (orientation: landscape) and (max-height: 500px) {
+    max-width: 80%;
+  }
+}
+
+.cropper {
+  //width: 414px;
+  //height: 414px;
+  max-width: 100%;
+  aspect-ratio: 1;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background: none !important;
+  border-radius: 8px;
+}
+
+.crop_wrap {
+  position: relative;
+}

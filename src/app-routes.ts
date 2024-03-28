@@ -1,0 +1,15 @@
+export enum AppRoute {
+  Main = '/',
+  StepCode = '/code',
+  StepColorSize = '/choose-color-size',
+  StepUploadPhoto = '/upload-photo',
+  StepFraming = '/framing',
+  StepFilters = '/filters',
+  StepEmail = '/email',
+  StepFinal = '/final',
+  Instruction = '/instruction',
+  Constructor = '/constructor/:slug',
+  Preview = '/preview',
+  UI = '/ui',
+  DebugPhotos = '/debug-photos',
+}

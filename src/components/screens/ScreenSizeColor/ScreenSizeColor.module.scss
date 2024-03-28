@@ -1,0 +1,65 @@
+@import '@/assets/styles/mixins';
+@import '@/assets/styles/variables';
+
+.section {
+  padding-bottom: 60px;
+}
+
+.header {
+  margin-bottom: 4px;
+
+  @include after($p768){
+    margin-bottom: 0;
+  }
+}
+
+.backButton {
+  margin-bottom: 8px;
+  @include after($p768){
+    margin-bottom: 12px;
+  }
+}
+
+.block {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: $white;
+  color: $black;
+
+  @include after($p768){
+    padding: 32px;
+  }
+
+  & + .block {
+    margin-top: 8px;
+    @include after($p768){
+      margin-top: 12px;
+    }
+  }
+
+  &.blockBlue {
+    background-color: $blue;
+    color: $white;
+
+    @include after($p768){
+      padding: 24px 32px;
+    }
+  }
+}
+
+.step {
+  margin-bottom: 16px;
+
+  @include after($p768){
+    margin-bottom: 20px;
+  }
+}
+
+.button {
+  width: 100%;
+  margin-top: 20px;
+
+  @include after($p768){
+    margin-top: 24px;
+  }
+}

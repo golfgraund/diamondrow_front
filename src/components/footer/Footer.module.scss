@@ -1,0 +1,35 @@
+@import '@/assets/styles/mixins';
+@import '@/assets/styles/variables';
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $footer-gradient;
+
+  &__wrapper {
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    img {
+      margin:  0 auto;
+    }
+
+    @include after($p768){
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
+}
+
+
+.logo {
+  display: block;
+  width: 80px;
+  height: 48px;
+
+  @include after($p768){
+    width: 100px;
+    height: 60px;
+  }
+}

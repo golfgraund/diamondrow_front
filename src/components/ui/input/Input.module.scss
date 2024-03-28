@@ -1,0 +1,83 @@
+@import '@/assets/styles/variables';
+
+.wrapper {
+  position: relative;
+
+  input {
+
+    border: 1px solid $middle-gray;
+    border-radius: 12px;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border: 2px solid $violet-hover;
+    }
+
+    &:hover {
+      & + .label {
+        &::before {
+          border-color: $violet;
+        }
+      }
+    }
+    &:focus {
+      & + .label {
+        &::before {
+          border-color: $dark-gray;
+          opacity: 0;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.label {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+
+}
+
+.input {
+  width: 100%;
+  height: 80px;
+  padding: 24px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 300;
+  text-align: center;
+  border: none;
+  border-radius: 12px;
+}
+
+.disabled {
+  input {
+    pointer-events: none;
+    background-color: $light-gray;
+    border-color: $middle-gray;
+  }
+}
+
+.withError {
+  .input {
+    border-color: $red;
+  }
+
+  input:focus,
+  input:hover {
+    border-color: $red;
+  }
+}
+
+.error {
+  text-align: center;
+  color: $red;
+  margin-bottom: 16px;
+}

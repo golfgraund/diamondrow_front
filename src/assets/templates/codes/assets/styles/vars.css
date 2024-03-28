@@ -1,0 +1,48 @@
+:root {
+  --dpi: 72;
+
+  /* *
+   * Equivalent A4 paper dimensions in pixels at 72 DPI
+   * Corresponds physically size 210mm x 297mm
+   * 595x842px
+   */
+  --a4-page-width: 37.1875rem;
+  --a4-page-height: 52.625rem;
+
+  /* *
+   * Equivalent A4 paper dimensions in pixels at 300 DPI
+   * Corresponds physically size 210mm x 297mm
+   * 2480x3508px
+   */
+  --a4-page-300dpi-width: 155rem;
+  --a4-page-300dpi-height: 219.25rem;
+
+  /* *
+   * Side padding at 72 DPI
+   * 36px
+   */
+  --a4-page-pad: 2.25rem;
+
+  /* *
+   * Fonts
+   */
+  --font-main: 'Nunito', sans-serif;
+  --font-titles: 'Jost', sans-serif;
+
+  /* *
+   * Colors
+   */
+  --black: #000;
+  --code-outline: #CE75F4;
+  --interface-grayscale-black: #333;
+  --interface-grayscale-gray: #787878;
+  --interface-grayscale-middle-gray: #C6C6C6;
+  --interface-grayscale-light-gray: #E1E1E1;
+  --interface-grayscale-white: #fff;
+}
+
+@media print {
+  :root {
+    --dpi: 143.75;
+  }
+}

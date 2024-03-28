@@ -1,0 +1,29 @@
+
+.block {
+  display: flex;
+  background: #555;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+
+  & > div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    img {
+      width: 200px;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      image-rendering: pixelated;
+
+      &:nth-child(1) {
+        image-rendering: high-quality;
+      }
+    }
+  }
+}

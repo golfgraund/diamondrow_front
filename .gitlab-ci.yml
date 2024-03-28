@@ -1,0 +1,29 @@
+image: docker:20.10.16
+stages:
+    - deploy_plesk
+
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'main'
+
+before_script:
+  - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+  - eval $(ssh-agent -s)
+  - echo "$PLESK_SSH" | tr -d '\r' | ssh-add -
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+
+deploy_plesk:
+  stage: deploy_plesk
+  #when: manual
+  only:
+    variables:
+      - $CI_COMMIT_BRANCH == 'main'
+  script:
+    - echo "Deploying application..."
+    - echo "Application successfully deployed."
+    - echo "Host *" > ~/.ssh/config
+    - echo "    StrictHostKeyChecking no" >> ~/.ssh/config
+    - cat ~/.ssh/config
+    - ssh diamonds.rdclr.ru@91.218.229.168 "cd ~/httpdocs && pwd && git pull origin main && yarn install --frozen-lockfile && yarn build && pm2 restart 0"
+    - echo "Success"

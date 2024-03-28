@@ -1,0 +1,51 @@
+$p360: 360px;
+$p660: 660px;
+$p768: 768px;
+$p1025: 1025px;
+$p1280: 1280px;
+$p1366: 1366px;
+$p1440: 1440px;
+$p1600: 1600px;
+$p1920: 1920px;
+
+@mixin before($point) {
+  @media (max-width: ($point - 1)) { @content; }
+}
+
+@mixin between($point1, $point2) {
+  @media (min-width: $point1) and (max-width: ($point2 - 1)) { @content; }
+}
+
+@mixin after($point) {
+  @media (min-width: $point) { @content; }
+}
+
+@mixin text-l {
+  font-size: 16px;
+  line-height: 22px;
+
+  @include after($p768){
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@mixin text-m {
+  font-size: 12px;
+  line-height: 16px;
+
+  @include after($p768) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@mixin text-s {
+  font-size: 10px;
+  line-height: 14px;
+
+  @include after($p768) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

@@ -1,0 +1,43 @@
+@import "@/assets/styles/typography";
+
+.step {
+  display: inline-flex;
+
+  &__number {
+    width: 28px;
+    min-width: 28px;
+    height: 28px;
+    min-height: 28px;
+    background-color: #fff;
+    border: 1px solid $violet;
+    @extend .text-l;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+
+    @include after($p768){
+      width: 32px;
+      min-width: 32px;
+      height: 32px;
+      min-height: 32px;
+      margin-right: 12px;
+    }
+
+    @include after($p1025){
+      margin-right: 16px;
+    }
+  }
+
+  &__description {
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+    @include after($p768){
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+  }
+}

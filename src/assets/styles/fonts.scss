@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'Nunito';
+  src:
+      local('Nunito'),
+      url('../fonts/Nunito-Light.woff2') format('woff2'),
+      url('../fonts/Nunito-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src:
+      local('Nunito'),
+      url('../fonts/Nunito-Medium.woff2') format('woff2'),
+      url('../fonts/Nunito-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src:
+      local('Nunito'),
+      url('../fonts/Nunito-Bold.woff2') format('woff2'),
+      url('../fonts/Nunito-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src:
+          local('Jost'),
+          url('../fonts/Jost-Medium.woff2') format('woff2'),
+          url('../fonts/Jost-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src:
+          local('Jost'),
+          url('../fonts/Jost-Bold.woff2') format('woff2'),
+          url('../fonts/Jost-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

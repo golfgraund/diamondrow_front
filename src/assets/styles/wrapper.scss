@@ -1,0 +1,30 @@
+@import "mixins";
+@import "variables";
+
+.wrapper {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+
+  &--slider {
+    padding-left: 12px;
+    padding-right: 12px;
+    max-width: 520px;
+
+    @include after($p768){
+      padding-left: 52px;
+      padding-right: 52px;
+    }
+  }
+
+  &--main {
+    max-width: calc(1076px + 48px);
+
+    @include after($p768){
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+@import "@/assets/styles/mixins.scss";
+@import "@/assets/styles/variables.scss";
+
+
+.section {
+  padding-bottom: 60px;
+}
+
+.header {
+  margin-bottom: 4px;
+
+  @include after($p768){
+    margin-bottom: 0;
+  }
+}
+
+.backButton {
+  margin-bottom: 8px;
+  @include after($p768){
+    margin-bottom: 12px;
+  }
+}
+
+
+.block {
+  background-color: $white;
+  border-radius: 12px;
+  padding: 20px;
+
+  @include after($p768){
+    padding: 32px;
+  }
+
+  & + .block {
+    margin-top: 8px;
+    @include after($p768){
+      margin-top: 12px;
+    }
+  }
+}
+
+.title {
+  color: #333333;
+  font-family: Jost, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 116.667% */
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+
+
+  @include before($p768){
+    margin-bottom: 12px;
+    letter-spacing: -0.03em;
+  }
+}
+
+.text {
+  color: #333333;
+
+  & + .text {
+    margin-top: 12px;
+  }
+}
+
+.picture {
+  display: block;
+  margin-top: 20px;
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.step {
+  margin-bottom: 16px;
+
+  @include after($p768){
+    margin-bottom: 20px;
+  }
+}
+
+.list {
+  margin-top: 20px;
+
+  @include after($p768){
+    margin-top: 24px;
+  }
+}
+
+
+
+.input {
+  background: $violet;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  @include text-m;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+
+
+  input {
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1;
+  }
+
+
+}

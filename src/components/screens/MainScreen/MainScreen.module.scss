@@ -1,0 +1,33 @@
+@import "@/assets/styles/mixins";
+
+.section {
+
+}
+
+.wrapper {
+  padding-bottom: 80px;
+
+  @include after($p768) {
+    padding-bottom: 92px;
+  }
+
+  @include after($p1025){
+    padding-bottom: 60px;
+  }
+}
+
+.mainBlock {
+  margin-bottom: 8px;
+
+  @include after($p768){
+    margin-bottom: 12px;
+  }
+}
+
+.secondBlock {
+  margin-bottom: 8px;
+
+  @include after($p768){
+    margin-bottom: 12px;
+  }
+}

@@ -1,0 +1,29 @@
+@import "@/assets/styles/variables";
+@import "@/assets/styles/mixins";
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background: $main-gradient;
+  overscroll-behavior: none;
+}
+
+.main {
+  height: 100%;
+}
+
+.popupButton {
+  position: fixed;
+  right: 16px;
+  bottom: 20px;
+
+  @include after($p768){
+    right: 32px;
+    bottom: 28px;
+  }
+
+  @include after($p1025){
+    right: 52px;
+    bottom: 40px;
+  }
+}

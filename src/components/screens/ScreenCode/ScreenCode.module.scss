@@ -1,0 +1,52 @@
+@import '@/assets/styles/mixins';
+@import '@/assets/styles/variables';
+
+.section {
+  padding-bottom: 60px;
+}
+
+.header {
+  margin-bottom: 4px;
+
+  @include after($p768){
+    margin-bottom: 0;
+  }
+}
+
+.backButton {
+  margin-bottom: 12px;
+}
+
+.content {
+  background-color: $white;
+  border-radius: 12px;
+  padding: 20px;
+
+  @include after($p768){
+    padding: 32px;
+  }
+}
+
+.step {
+  margin-bottom: 16px;
+
+  @include after($p768){
+    margin-bottom: 20px;
+  }
+}
+
+.input {
+  margin-bottom: 16px;
+}
+
+.list {
+  margin-bottom: 20px;
+
+  @include after($p768){
+    margin-bottom: 24px;
+  }
+}
+
+.button {
+  width: 100%;
+}

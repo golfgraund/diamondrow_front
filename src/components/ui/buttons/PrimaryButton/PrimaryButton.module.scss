@@ -1,0 +1,62 @@
+@import '@/assets/styles/variables';
+@import '@/assets/styles/typography';
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: $violet;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    background-color: $violet-hover
+  }
+  &:active {
+    background-color: $violet-active
+  }
+
+  &.disabled {
+    pointer-events: none;
+    background-color: $middle-gray;
+  }
+}
+
+.text {
+  color: $white;
+  transition: color 0.3s ease;
+  @include text-m;
+  @extend .fw-bold;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8px;
+
+  @include after($p768){
+    width: 24px;
+    height: 24px;
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.error {
+  display: block;
+  color: $red;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  @extend .fw-light;
+}

@@ -1,0 +1,67 @@
+// для уникальных кнопок/ссылок
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &--wb {
+    color: #82118C;
+    font-weight: 700;
+  }
+
+  &--ozon {
+    color: #005BFF;
+    font-weight: 700;
+  }
+
+  &--secondary {
+    padding: 12px;
+    border-radius: 8px;
+    background: var(--interface-grayscale-white, #FFF);
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 8px;
+      pointer-events: none;
+      transition: border-color 0.3s ease, opacity 0.3s ease;
+    }
+
+    &::before {
+      opacity: 1;
+      border: 1px solid $middle-gray;
+    }
+
+    &::after {
+      opacity: 0;
+      border: 2px solid $violet;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 0;
+      }
+      &::after {
+        opacity: 1;
+        border-color: $violet;
+      }
+    }
+
+    &:active {
+      &::before {
+        opacity: 0;
+      }
+      &::after {
+        opacity: 1;
+        border-color: $violet-active;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import '@/assets/styles/mixins';
+@import '@/assets/styles/typography';
+
+.section {
+}
+
+.wrap {
+  h1 {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.text {
+  @extend .text-m;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  margin: 4px;
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputs {
+  max-width: 416px;
+  padding: 32px;
+  padding-bottom: 36px;
+  background-color: #fff;
+  margin: 20px auto;
+  border-radius: 12px;
+  label + label {
+    margin-top: 10px;
+  }
+}
+
+.input {
+  & + .input {
+    margin-top: 10px;
+  }
+}

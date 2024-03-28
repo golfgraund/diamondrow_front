@@ -1,0 +1,53 @@
+@import '@/assets/styles/mixins';
+
+.section {
+  padding-bottom: 60px;
+}
+
+.header {
+  margin-bottom: 4px;
+
+  @include after($p768){
+    margin-bottom: 0;
+  }
+}
+
+.backButton {
+  margin-bottom: 8px;
+
+  @include after($p768){
+    margin-bottom: 12px;
+  }
+}
+
+.step {
+  margin-bottom: 16px;
+
+  @include after($p768){
+    margin-bottom: 20px;
+  }
+}
+
+.block {
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 20px;
+
+  @include after($p768) {
+    padding: 32px;
+  }
+}
+
+.button {
+  margin-top: 20px;
+  width: 100%;
+
+  @include after($p768){
+    margin-top: 24px;
+  }
+}
+
+.label {
+  @include text-m;
+  margin-bottom: 12px;
+}

@@ -1,0 +1,91 @@
+@import '@/assets/styles/typography';
+
+.radio {
+}
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  input:checked + .circle {
+    border-color: $violet;
+
+    &::before{
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    .circle {
+      border-color: $violet;
+    }
+  }
+
+  & + .item {
+    margin-top: 14px;
+  }
+
+  &.withImage {
+    & + .item {
+      margin-top: 20px;
+    }
+  }
+}
+
+.circle {
+  display: block;
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  min-height: 16px;
+  position: relative;
+  border: 2px solid $middle-gray;
+  border-radius: 50%;
+  transition: border-color 0.3s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $violet;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+}
+
+.label {
+  @include text-l;
+  font-weight: 300;
+  margin-left: 8px;
+}
+
+.image {
+  margin-right: 16px;
+  width: 120px;
+  height: 140px;
+  position: relative;
+  border-radius: 8px;
+
+  @include after($p768){
+    margin-right: 20px;
+  }
+
+  img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}

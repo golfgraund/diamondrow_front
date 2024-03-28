@@ -1,0 +1,153 @@
+@import "variables";
+@import "mixins";
+
+html {
+  font-family: $font-main;
+}
+
+h1, h2, h3, h4, h5, h6 p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-titles;
+}
+
+p, a, button {
+  font-family: $font-main;
+  font-weight: 300;
+}
+
+p {
+  margin: 0;
+}
+
+input, label {
+  font-family: $font-main;
+}
+
+.fw-light {font-weight: 300;}
+
+.fw-medium {font-weight: 500;}
+
+.fw-bold {font-weight: 700;}
+
+.input,
+.label {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 300;
+}
+
+h1, .h1 {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 500;
+  font-family: $font-titles;
+
+  @include after($p768) {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+h2, .h2 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+
+  @include after($p768) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+h3, .h3 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.text-l {
+  font-size: 16px;
+  line-height: 22px;
+
+  @include after($p768){
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.text-m {
+  font-size: 12px;
+  line-height: 16px;
+
+  @include after($p768) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.text-s {
+  font-size: 10px;
+  line-height: 14px;
+
+  @include after($p768) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.mosaic {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+
+  @include after($p768){
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+.mosaic-big {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    @extend .text-s;
+    color: $black;
+    font-weight: 300;
+    padding-left: 12px;
+
+    @include after($p768){
+      padding-left: 14px;
+    }
+
+    &::before{
+      content: '';
+      width: 6px;
+      height: 6px;
+      position: absolute;
+      top: 4px;
+      left: 0;
+      background-color: $blue;
+      border-radius: 50%;
+
+      @include after($p768){
+        top: 5px;
+      }
+    }
+
+    & + li {
+      margin-top: 8px;
+    }
+  }
+}
